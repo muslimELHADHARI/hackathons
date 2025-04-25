@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 142.1 76.2% 36.3%;
+    --radius: 0.5rem;
+
+    /* Fluid design system variables */
+    --fluid-primary: 160 84% 39%;
+    --fluid-primary-hover: 160 84% 35%;
+    --fluid-primary-foreground: 0 0% 100%;
+
+    --fluid-secondary: 220 70% 50%;
+    --fluid-secondary-hover: 220 70% 45%;
+    --fluid-secondary-foreground: 0 0% 100%;
+
+    --fluid-accent: 280 70% 50%;
+    --fluid-accent-hover: 280 70% 45%;
+    --fluid-accent-foreground: 0 0% 100%;
+
+    --fluid-background: 210 20% 98%;
+    --fluid-background-hover: 210 20% 95%;
+    --fluid-background-foreground: 220 20% 10%;
+
+    --fluid-radius-sm: 0.5rem;
+    --fluid-radius-md: 1rem;
+    --fluid-radius-lg: 1.5rem;
+    --fluid-radius-xl: 2rem;
+    --fluid-radius-full: 9999px;
+
+    --fluid-animation-slow: 1s;
+    --fluid-animation-medium: 0.5s;
+    --fluid-animation-fast: 0.3s;
+    --fluid-animation-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --fluid-animation-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --fluid-animation-wave: cubic-bezier(0.36, 0.45, 0.63, 0.53);
+
+    --fluid-shadow-subtle: 0 2px 10px rgba(0, 0, 0, 0.05);
+    --fluid-shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --fluid-shadow-strong: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --fluid-shadow-glow: 0 0 20px rgba(16, 185, 129, 0.3);
+    --fluid-shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    --fluid-font-display: "Poppins", sans-serif;
+    --fluid-font-body: "Inter", sans-serif;
+    --fluid-font-accent: "Poppins", sans-serif;
+
+    --fluid-font-light: 300;
+    --fluid-font-regular: 400;
+    --fluid-font-medium: 500;
+    --fluid-font-bold: 700;
+
+    --fluid-font-size-xs: 0.75rem;
+    --fluid-font-size-sm: 0.875rem;
+    --fluid-font-size-md: 1rem;
+    --fluid-font-size-lg: 1.125rem;
+    --fluid-font-size-xl: 1.25rem;
+    --fluid-font-size-2xl: 1.5rem;
+    --fluid-font-size-3xl: 2rem;
+
+    --fluid-spacing-xs: 0.5rem;
+    --fluid-spacing-sm: 1rem;
+    --fluid-spacing-md: 1.5rem;
+    --fluid-spacing-lg: 2rem;
+    --fluid-spacing-xl: 3rem;
+    --fluid-spacing-2xl: 4rem;
+    --fluid-spacing-3xl: 6rem;
+
+    --fluid-blur: blur(8px);
+    --fluid-glassmorphism: backdrop-filter: blur(16px);
+    --fluid-noise: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    --fluid-grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grainFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grainFilter)'/%3E%3C/svg%3E");
+
+    --fluid-shape-blob: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    --fluid-shape-wave: 0% 0%, 100% 0%, 100% 75%, 0% 100%;
+    --fluid-shape-curve: 0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%;
+    --fluid-shape-zigzag: 0% 0%, 20% 20%, 40% 0%, 60% 20%, 80% 0%, 100% 20%, 100% 100%, 0% 100%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 142.1 70.6% 45.3%;
+    --primary-foreground: 144.9 80.4% 10%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 142.4 71.8% 29.2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes blob {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+.fluid-blob {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: blob 8s ease-in-out infinite;
+}
+
+@layer utilities {
+  .fluid-glass {
+    @apply backdrop-blur-md bg-white/10 dark:bg-black/10 border border-white/20 dark:border-white/10;
+  }
+
+  .fluid-glass-dark {
+    @apply backdrop-blur-md bg-black/30 dark:bg-black/50 border-b border-white/10;
+  }
+
+  .fluid-glow {
+    @apply shadow-[0_0_15px_rgba(16,185,129,0.5)] dark:shadow-[0_0_15px_rgba(16,185,129,0.3)];
+  }
+
+  .fluid-text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-blue-500 dark:from-emerald-400 dark:to-blue-400;
+  }
+
+  .fluid-bg-gradient {
+    @apply bg-gradient-to-br from-emerald-500 to-blue-500 dark:from-emerald-600 dark:to-blue-600;
+  }
+
+  .fluid-border-gradient {
+    @apply border-2 border-transparent bg-origin-border bg-clip-border bg-gradient-to-r from-emerald-500 to-blue-500;
+  }
+
+  .fluid-hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .fluid-card {
+    @apply rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100 dark:border-gray-700;
+  }
+
+  .fluid-input {
+    @apply rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:focus:ring-emerald-400 focus:border-transparent transition-all duration-300;
+  }
+
+  .fluid-button {
+    @apply rounded-full px-6 py-2 font-medium transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .fluid-button-primary {
+    @apply fluid-button bg-gradient-to-r from-emerald-500 to-blue-500 text-white hover:from-emerald-600 hover:to-blue-600 focus:ring-emerald-500;
+  }
+
+  .fluid-button-secondary {
+    @apply fluid-button bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 focus:ring-gray-200 dark:focus:ring-gray-700;
+  }
+}
